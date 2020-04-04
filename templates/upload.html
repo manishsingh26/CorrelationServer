@@ -1,0 +1,39 @@
+<!doctype html>
+<title>Correlation Operation</title>
+<h2>Pattern Correlation Form</h2>
+<p>
+	{% with messages = get_flashed_messages() %}
+	  {% if messages %}
+		<ul class=flashes>
+		{% for message in messages %}
+		  <li>{{ message }}</li>
+		{% endfor %}
+		</ul>
+	  {% endif %}
+	{% endwith %}
+</p>
+<form method="post" action="/" enctype="multipart/form-data">
+    <dl>
+		<p> Select File ::
+			<input type="file" name="file" autocomplete="off" required>
+		</p>
+    </dl>
+	<d2>
+		<p> Left Column ::
+			<input type="text" name="left_column">
+		</p>
+    </d2>
+	<d3>
+		<p> Right Columns ::
+			<input type="text" name="right_column">
+		</p>
+    </d3>
+	<d4>
+		<p> File Separator ::
+			<input type="text" name="file_sep">
+		</p>
+    </d4>
+    <p>
+		<input type="submit" value="Submit">
+	</p>
+</form>
